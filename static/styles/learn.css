@@ -1,0 +1,347 @@
+.content {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 4em;
+    width:100%;
+}
+
+.accordion-section {
+    width: 25em;
+    height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding:0 1em 0 1em;
+}
+
+/* main accordion */
+.accordion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    padding: 8px 8px 8px 0px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* .accordion:hover {
+    background-color: rgb(229, 239, 253);
+    color: #000f2d;
+    transition: 0s;
+} */
+
+.accordion svg {
+    width: 24px;
+    height: 24px;
+    transition: 0.25s;
+}
+
+.active svg{
+    width: 24px;
+    height: 24px;
+    transform: rotate(90deg);
+    transition: 0.25s;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel button {
+    width: 100%;
+    border: 0;
+    border-left: 2px solid #dddddd ;
+    text-align: left;
+    padding: 8px 8px 8px 16px;
+    background-color: #fff;
+    color: #000;
+}
+
+.panel button:hover {
+    color: #000;
+    background-color: rgb(229, 239, 253);
+    transition: 0.25s;
+    border-left: 4px solid #a1c7ff;
+}
+
+/* sub-accordion */
+.sub-accordion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.4s;
+    padding: 8px 8px 8px 16px;
+}
+
+.sub-accordion:hover {
+    /* background-color: #cfe2ff; */
+    background-color: rgb(229, 239, 253);
+    color: #000f2d;
+    transition: 0s;
+}
+
+.subpanel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-left: 2px solid #dddddd;
+}
+
+.subpanel button {
+    margin-left: 1em;
+    width: 100%;
+    border: 0;
+    border-left: 2px solid #dddddd ;
+    text-align: left;
+    padding: 8px;
+    background-color: rgba(255, 0, 0, 0);
+    color: #000;
+}
+
+.sub-accordion svg {
+    width: 24px;
+    height: 24px;
+    transition: 0.25s;
+}
+
+.learn-title  {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0.5 0 1em 0;
+}
+
+.right{
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #ffffff; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 100px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+  
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 50px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidenav .closebtn svg {
+    width: 24px;
+    height: 24px;
+    transition: 0.25s;
+}
+
+.openNav {
+    margin-left: 2em;
+    margin-bottom: 1em;
+    width:210px;
+    padding:5px;
+    border-radius: 6px;
+    border: none;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.openNav h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.openNav:hover {
+    cursor: pointer;
+    background-color: rgb(229, 239, 253);
+}
+
+.openNavBackground {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background-color: #0000004b;
+}
+
+@media (max-width: 425px) {
+    .openNav{
+        margin-left: 1em;
+    }
+    .content{
+        margin-top: 3em;
+    }
+    .right{
+        margin: 0 1em 0 1em;
+    }
+    .courseHighlightsTitle{
+        margin-left: 0.5em;
+    }
+}
+
+@media (min-width: 425px){
+    .courseHighlightsTitle{
+        margin-left: 0.8em;
+    } 
+}
+
+/* carousel */
+
+.carousel{
+    background: none;
+    color: #ecf0f1;
+    font-family: 'Open Sans', sans-serif;
+    min-height: 10vh;
+    flex-direction: row;
+    align-items: center;
+    width: 95%;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.contain {
+    width: 100%;
+}
+
+.row {
+  overflow-x: auto;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.row__inner {
+  transition: 450ms transform;
+  font-size: 0;
+  white-space: nowrap;  /*padding-bottom: 10px;  Account for OS X scroll bar */
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: auto !important;
+  max-width: none!important;
+}
+
+.tile {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 140.625px;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+}
+
+.tile__img {
+  width: 250px;
+  height: 140.625px;
+  object-fit: cover;
+}
+
+.tile__details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 10px;
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: 450ms opacity;
+}
+
+.tile__details:after,
+.tile__details:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+}
+
+.tile__details:after {
+  margin-top: -25px; /* 50px / 2 */
+  margin-left: -25px; /* 50px / 2 */
+  width: 50px;
+  height: 50px;
+  border: 3px solid #ecf0f1;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.tile__details:before {
+  content: '▶';
+  left: 0;
+  width: 100%;
+  font-size: 30px;
+  margin-left: 3px;
+  margin-top: -25px;
+  text-align: center;
+  z-index: 2;
+}
+
+.tile:hover .tile__details {
+  opacity: 1;
+}
+
+.tile__title {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+
+/* Hover effects */
+.row__inner:hover {
+  transform: translate3d(-62.5px, 0, 0); /* -(250px * (1.5 - 1) / 2) */
+}
+
+.row__inner:hover .tile {
+  opacity: 0.3;
+}
+
+.row__inner:hover .tile:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.tile:hover ~ .tile {
+  transform: translate3d(125px, 0, 0); /* 250px * (1.5 - 1) */
+}
+
+@media (max-width:1024px) {
+    .carousel{
+        background: none;
+        color: #ecf0f1;
+        font-family: 'Open Sans', sans-serif;
+        min-height: 10vh;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        margin-left:0;
+        margin-right:0;
+    }
+}
