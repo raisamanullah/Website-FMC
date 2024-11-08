@@ -197,12 +197,14 @@
     }
     .courseHighlightsTitle{
         margin-left: 0.5em;
+        margin-bottom: 1em;
     }
 }
 
 @media (min-width: 425px){
     .courseHighlightsTitle{
         margin-left: 0.8em;
+        margin-bottom: 1em;
     } 
 }
 
@@ -235,6 +237,7 @@
   font-size: 0;
   white-space: nowrap;  /*padding-bottom: 10px;  Account for OS X scroll bar */
   display: flex;
+  margin: 70.3125px 0;
   flex-wrap: nowrap;
   justify-content: center;
   width: auto !important;
