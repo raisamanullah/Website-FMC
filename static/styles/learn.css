@@ -40,6 +40,7 @@
     width: 24px;
     height: 24px;
     transition: 0.25s;
+    margin-right: 2em;
 }
 
 .active svg{
@@ -47,6 +48,7 @@
     height: 24px;
     transform: rotate(90deg);
     transition: 0.25s;
+    margin-right: 2em;
 }
 
 .panel {
@@ -110,6 +112,7 @@
     width: 24px;
     height: 24px;
     transition: 0.25s;
+    margin-right: 2em;
 }
 
 .learn-title  {
@@ -150,6 +153,7 @@
     width: 24px;
     height: 24px;
     transition: 0.25s;
+    margin-right: 1em;
 }
 
 .openNav {
